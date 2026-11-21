@@ -36,3 +36,6 @@ desktop.ini
 /hardware/Menu.c
 /hardware/Menu.h
 /推送更新.bat
+
+# Windows 保留设备名残留（0字节）
+/NUL
