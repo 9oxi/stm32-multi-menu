@@ -28,3 +28,11 @@ DebugConfig/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ---------- 与工程无关 / 重复的杂项（不提交） ----------
+/prject
+/project
+/project_fixed_backup.*
+/hardware/Menu.c
+/hardware/Menu.h
+/推送更新.bat

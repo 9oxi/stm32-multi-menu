@@ -1,8 +1,8 @@
 #include "stm32f10x.h"                               // 第一行必须是官方库
 #include "Delay.h"                                   // 系统节拍：TIM4每1ms中断一次
 #include "OLED.h"                                    // 四针I2C屏幕（SCL=PB8，SDA=PB9）
-#include "Key.h"                                     // 4个按键（PA0~PA3，上拉输入）
-#include "Buzzer.h"                                  // 有源蜂鸣器（PA4，高电平响）
+#include "Key.h"                                     // 4个按键（上拉输入）
+#include "Buzzer.h"                                  // 有源蜂鸣器（PA8，低电平触发：输出0才响）
 #include "IR.h"                                      // 红外传感器（PB0，外部中断，数圈数）
 #include "Menu.h"                                    // 多级菜单的全部逻辑都在这里
 

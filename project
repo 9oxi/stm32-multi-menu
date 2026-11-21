@@ -1,8 +1,0 @@
-#ifndef __SENSOR_H
-#define __SENSOR_H
-extern   float current_temp;
-void Sensor_Init(void);  // 初始化传感器
-uint16_t Get_Speed(void); // 获取当前速度（模拟数据，放大10倍）
-void Get_Time(uint16_t *year, uint8_t *month, uint8_t *day, uint8_t *hour, uint8_t *min, uint8_t *sec); // 获取时间
-
-#endif

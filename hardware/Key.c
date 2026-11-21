@@ -4,9 +4,9 @@
 
 #define KEY_PORT     GPIOA                           // 4个按键都接在GPIOA口上
 #define KEY_UP_PIN   GPIO_Pin_0                      // 上键接PA0
-#define KEY_DOWN_PIN GPIO_Pin_2                      // 下键接PA1
-#define KEY_OK_PIN   GPIO_Pin_4                      // 确认键接PA2
-#define KEY_CAN_PIN  GPIO_Pin_6                      // 取消键接PA3
+#define KEY_DOWN_PIN GPIO_Pin_2                      // 下键接PA2
+#define KEY_OK_PIN   GPIO_Pin_4                      // 确认键接PA4
+#define KEY_CAN_PIN  GPIO_Pin_6                      // 取消键接PA6
 
 void Key_Init(void)                                  // 初始化按键：4条线全配成上拉输入
 {
@@ -28,9 +28,9 @@ uint8_t Key_Scan(void)                               // 扫描按键：返回键
     uint8_t raw = KEY_NONE;                          // 本次读到的原始键值，先当成没按
 
     if (GPIO_ReadInputDataBit(KEY_PORT, KEY_UP_PIN)   == Bit_RESET) raw = KEY_UP;    // PA0是低电平说明上键按着
-    if (GPIO_ReadInputDataBit(KEY_PORT, KEY_DOWN_PIN) == Bit_RESET) raw = KEY_DOWN;  // PA1低电平=下键按着
-    if (GPIO_ReadInputDataBit(KEY_PORT, KEY_OK_PIN)   == Bit_RESET) raw = KEY_OK;    // PA2低电平=确认键按着
-    if (GPIO_ReadInputDataBit(KEY_PORT, KEY_CAN_PIN)  == Bit_RESET) raw = KEY_CAN;   // PA3低电平=取消键按着
+    if (GPIO_ReadInputDataBit(KEY_PORT, KEY_DOWN_PIN) == Bit_RESET) raw = KEY_DOWN;  // PA2低电平=下键按着
+    if (GPIO_ReadInputDataBit(KEY_PORT, KEY_OK_PIN)   == Bit_RESET) raw = KEY_OK;    // PA4低电平=确认键按着
+    if (GPIO_ReadInputDataBit(KEY_PORT, KEY_CAN_PIN)  == Bit_RESET) raw = KEY_CAN;   // PA6低电平=取消键按着
 
     if (raw != last_raw)                             // 电平跟上次不一样，说明手指刚按下或刚松开
     {
