@@ -31,7 +31,7 @@
 ```
 .
 ├── project.uvprojx        # Keil 工程文件（用 Keil5 打开）
-├── quest.c                # 课程题目要求（文本，不参与编译）
+├── quest.md               # 课程题目要求（文档，不参与编译）
 ├── user/                  # 应用层：main.c、Menu.c/h（菜单状态机）
 ├── hardware/              # 硬件驱动：OLED、Key、Buzzer、IR
 ├── system/                # Delay 延时（TIM4 节拍）
@@ -48,5 +48,5 @@
 ## 仓库说明
 
 - 只提交源码与工程文件；`Objects/`、`Listings/`、`*.axf`、`*.uvguix.*` 等编译产物由 `.gitignore` 排除。
-- `quest.c` 是题目要求文档（内容是中文说明，不是 C 代码），放在这里方便对照需求。
+- `quest.md` 是题目要求文档（内容是中文说明，不是 C 代码），放在这里方便对照需求。
 - 以下杂项**未纳入版本管理**：`prject`、`project`（`Sensor.c`/`Sensor.h` 丢失扩展名后的残留）、`project_fixed_backup.*`（工程备份）、`hardware/Menu.c`、`hardware/Menu.h`（与 `user/Menu.c` 内容完全重复，且未被 Keil 工程引用）。
