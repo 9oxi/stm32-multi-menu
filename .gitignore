@@ -1,0 +1,30 @@
+# ---------- Keil MDK 编译产物（不要提交） ----------
+Objects/
+Listings/
+DebugConfig/
+*.o
+*.d
+*.crf
+*.dep
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.sct
+*.htm
+*.iex
+*.tra
+*.build_log.htm
+*.uvguix.*
+*.uvoptx
+*.uvprojx.user
+
+# ---------- 编辑器 / 系统文件 ----------
+.vscode/
+.idea/
+*.code-workspace
+Thumbs.db
+desktop.ini
+.DS_Store

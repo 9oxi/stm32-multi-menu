@@ -1,0 +1,26 @@
+#include "stm32f10x.h"
+#include "Sensor.h"
+
+// 用一个变量模拟当前温度（后面主函数会用到）
+float current_temp = 25.5;
+
+// 模拟当前时间
+uint16_t current_year = 2024;
+uint8_t current_month = 9, current_day = 20, current_hour = 18, current_min = 30, current_sec = 0;
+
+void Sensor_Init(void) { /* 真实代码需要初始化ADC或定时器输入捕获，此处省略 */ }
+
+// 获取速度（模拟返回20.5，因为整数放大10倍就是205）
+uint16_t Get_Speed(void) {
+    return 205;
+}
+
+// 获取时间（把当前时间传到指针指向的变量里）
+void Get_Time(uint16_t *year, uint8_t *month, uint8_t *day, uint8_t *hour, uint8_t *min, uint8_t *sec) {
+    *year = current_year;
+    *month = current_month;
+    *day = current_day;
+    *hour = current_hour;
+    *min = current_min;
+    *sec = current_sec;
+}
